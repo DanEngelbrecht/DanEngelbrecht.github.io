@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+My first computer was a ZX-81 where I wrote some small (yes, very small) games, been hacking away ever since.
 
 ### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Twitter: https://twitter.com/DanEngelbrecht
+LinkedIn: https://www.linkedin.com/in/dan-engelbrecht/
