@@ -8,4 +8,5 @@ My first computer was a ZX-81 where I wrote some small (yes, very small) games, 
 
 ### More Information
 Twitter: https://twitter.com/DanEngelbrecht
+
 LinkedIn: https://www.linkedin.com/in/dan-engelbrecht/
