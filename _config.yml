@@ -14,6 +14,7 @@ avatar: https://avatars0.githubusercontent.com/u/1876793?s=460&v=4
 #
 # Flags below are optional
 #
+remote_theme: poole/lanyon
 
 # Includes an icon in the footer for each username you enter
 footer-links:
