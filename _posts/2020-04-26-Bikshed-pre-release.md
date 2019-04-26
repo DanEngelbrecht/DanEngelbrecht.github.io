@@ -21,3 +21,6 @@ The tests has been validated to cover 100% of the code in `bikeshed.h` so it sho
 
 ## License
 The code is released with the MIT license so feel free to do what you want with the code, no restrictions. I would appreciate some feedback if you find it useful though.
+
+## Thanks
+Thanks to @JCash for his excellent [jctest](https://github.com/JCash/jctest/releases) library.
