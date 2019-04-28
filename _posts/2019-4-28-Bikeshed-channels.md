@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bikeshed channels
+title: Bikeshed Channels
 ---
 
 # Priorities in Bikeshed? No, channels!
