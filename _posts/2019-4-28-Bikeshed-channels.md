@@ -4,6 +4,7 @@ title: Bikeshed channels
 ---
 
 # Priorities in Bikeshed? No, channels!
+![Dual queuing indexes](../images/Index-pool-title.jpg)
 
 ## Introduction
 [In a previous post](https://danengelbrecht.github.io/Bikeshed/) I talked about the design of [Bikeshed](https://github.com/DanEngelbrecht/bikeshed), the job manager I've written. I also showed a bit of how to use it.
@@ -47,14 +48,14 @@ Now, this seems nice and simple but as probably many of you know you need to wat
 Let's take a look at how it looks it works with a filled index pool - this is what I use to allocate tasks.
 
 ### Allocating indexes
-![Allocating indexes](../images/index-pool-Allocator.jpg)
+![Allocating indexes](../images/Index-pool-Allocator.jpg)
 
 At the top, we see that the head hold "1" together with the generation marker "0". Each time an index is pushed to the index pool the generation is increased, this makes the head value always unique even if we push back the same index later on. This is essential when we use multithreaded code so only one thread will succeed in swapping out the head value.
 
 The ready queue uses the same data structure but it starts out empty, the indexes to push are the indexes that we get when allocating tasks indexes. The index pool for allocation and for the ready queue has the same size so we can just use the indexes as is.
 
 ### Queueing indexes
-![Queueing indexes](../images/index-pool-Single-head-queue.jpg)
+![Queueing indexes](../images/Index-pool-Single-head-queue.jpg)
 
 When pushing we increase the generation counter with an atomic add, we read the head value, set the index entry we want to push to the current head and then do a compare and swap with our pushed index merged with the generation. If another thread is faster and gets in between we try again by updating our index entry with the new head value. We keep trying until it succeeds.
 
@@ -65,7 +66,7 @@ By only changing the head and not traversing any deep data structure the pushing
 This is how it works with one channel for the ready queue but extending so we have multiple channels for the ready queue is actually quite simple, we just create more "heads". As we allocate indexes from a single pool we use the same index array so there is no risk for conflict.
 
 ### Dual queuing indexes
-![Dual queuing indexes](../images/index-pool-Dual-head-queue.jpg)
+![Dual queuing indexes](../images/Index-pool-Dual-head-queue.jpg)
 
 This supports an arbitrary number of heads - when we want to pop an index we need to check all the heads so it is not entirely without a performance cost, but checking one channel is a cheap as before.
 
