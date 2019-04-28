@@ -65,7 +65,7 @@ By only changing the head and not traversing any deep data structure the pushing
 
 This is how it works with one channel for the ready queue but extending so we have multiple channels for the ready queue is actually quite simple, we just create more "heads". As we allocate indexes from a single pool we use the same index array so there is no risk for conflict.
 
-### Dual queuing indexes
+### Dual head index queuing
 ![Dual queuing indexes](../images/Index-pool-Dual-head-queue.jpg)
 
 This supports an arbitrary number of heads - when we want to pop an index we need to check all the heads so it is not entirely without a performance cost, but checking one channel is a cheap as before.
