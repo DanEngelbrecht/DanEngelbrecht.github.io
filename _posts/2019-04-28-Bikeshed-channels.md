@@ -24,6 +24,7 @@ You can still have dependencies of tasks across different channels which is not 
 
 All in all, it feels like a worthwhile addition even if I personally don't need this feature right now.
 
+
 ## How does it really work
 First I thought I'd dive in a bit on how the library manages tasks, dependencies and ready queues in a bit more detail. This will help you understand how the library works and also why adding channels was a very cheap thing to do.
 
