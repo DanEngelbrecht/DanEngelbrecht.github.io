@@ -134,13 +134,13 @@ Create tasks in batches:
 
 ### Results Table
 
-| Test | tasks per second | ns per task |
-|-------|-------|-------|
-| A | 3180886 | 314 |
-| B | 3295478 | 303 |
-| C | 3871440 | 258 |
-| D | 3979132 | 251 |
-| E | 7995729 | 125 |
+| Test | Tasks per second | Time per task |
+|-------|--------|---------|
+| A | 3180886 | 314 ns |
+| B | 3295478 | 303 ns |
+| C | 3871440 | 258 ns |
+| D | 3979132 | 251 ns |
+| E | 7995729 | 125 ns |
 
 ### Results Graph
 
