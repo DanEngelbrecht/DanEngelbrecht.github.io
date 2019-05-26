@@ -18,6 +18,8 @@ All the changes are worth investigation if and by how much they improve the perf
 
 The improvements are not for free - the code is slightly more complex and has grown quite a bit since the first pre-release but the header still lands below 1000 lines - and that includes information, comments, version history, and license.
 
+The tests were run using the latest pre-release of Bikeshed which can be found [here](https://github.com/DanEngelbrecht/bikeshed/releases). The code for the tests are in the master branch in the examples folder [source](https://github.com/DanEngelbrecht/bikeshed/blob/master/examples/stealing_multi_threaded_task_producer_and_consumer.cpp).
+
 ## The test
 The test consists of four (4) threads producing tasks and making them ready as fast as possible only pulling back when it creates tasks faster than tasks are consumed. Four (4) consuming threads that try to execute ready tasks as fast as they can.
 
