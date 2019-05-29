@@ -3,7 +3,7 @@ layout: post
 title: Bikeshed v1.0
 ---
 
-# Version 1.0 of Bikeshed release
+# Version 1.0 of Bikeshed released
 I decided to release version 1.0 of bikeshed as I feel I can commit to the API as it is now; get it here: [here](https://github.com/DanEngelbrecht/bikeshed/releases).
 
 This release keeps the same API as the previous pre-release 4 and only has minor internal tweaks with no behavioral changes.
